@@ -1,0 +1,57 @@
+
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="searchInput">
+    <view class="search">
+      <icon type="search" size="14px" ></icon> 搜 索
+    </view>
+  </view>
+
+
+  <!-- 主体 -->
+  <view class="mian">
+    <!-- 侧边菜单栏 -->
+    <view class="navs">
+      <view class="navsItem {{index === current ? 'active': '' }}"
+      wx:for="{{navs}}"
+      wx:key="{{index}}"
+      bindtap="handleChange"
+      data-index="{{index}}">
+      {{item.cat_name}}
+      </view>
+    </view>
+
+    <!-- 品牌列表 -->
+    <view class="category">
+      <!-- 列表 -->
+      <view 
+        class="categoryItem"
+        wx:for="{{navs[current].children}}"
+        wx:key="{{index}}">
+      
+          <!-- 标题 -->
+          <view class="categoryTitle">
+           <text>/</text>
+           {{item.cat_name}}
+           <text>/</text>
+          </view>
+          <!-- 子列表 -->
+          <view class="categorylist">
+           <view class="categoryImg"
+             wx:for="{{item.children}}"
+             wx:key="{{index}}">
+             <image
+              src="{{item.cat_icon}}"
+              mode="aspectFill">
+              </image>
+              <view>{{item.cat_name}}</view>
+           </view>
+          
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+</view>
