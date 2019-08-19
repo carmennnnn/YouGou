@@ -1,0 +1,41 @@
+<!--pages/goods_list/index.wxml-->
+<view class="mians">
+
+<!-- 搜索栏 -->
+<view class="search">
+  <view class="searchInput">
+    <icon type="search" size="16"></icon>
+    <!-- 使用监听事件，把输入的值赋值给searchVal ; bindinput等于web里的oninput，每次输入文字时都会触发 ； bindconfirm 点击确定按钮时触发，手机的按钮可能叫搜索或完成-->
+    <input placeholder="请输入你想要的商品" value="{{searchVal}}" bindinput="handleInput" bindconfirm="handleConfirm">
+    </input>
+  </view>
+  <view class="cancel" bindtap="handleCancel" wx:if="{{searchVal}}">
+    取消
+  </view>
+</view>
+
+  <!-- 搜索建议的列表 -->
+<view class="searchList" wx:if="{{searchVal}}">
+  <navigator url="/pages/search/index?keyword={{searchVal}}"></navigator>
+</view>
+
+  <!-- 历史搜索 -->
+<view class="history">
+  <view class="historyText">
+    历史记录
+  </view>
+  <view>
+    <icon type="clear" size="16" bindtap="handleClearAll"></icon>
+  </view>
+</view>
+
+<view class="historyVal">
+  <navigator
+  url="/pages/search_list/index?keyword={{item}}"
+  wx:for="{{history}}"
+  wx:key="{{index}}">
+  {{ item }}
+  </navigator>
+</view>
+
+</view>

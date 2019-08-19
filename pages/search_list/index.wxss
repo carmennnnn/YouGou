@@ -1,0 +1,68 @@
+/* pages/goods_list/index.wxss */
+.mians {
+  position: relative;
+}
+
+.search {
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  padding:20rpx;
+}
+
+.searchInput {
+  display: flex;
+  background: #fff;
+  font-size:13px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.searchInput icon {
+  padding:10rpx 15rpx 0 15rpx;
+}
+
+.cancel {
+  width: 150rpx;
+  font-size: 12px;
+  color: #333;
+  padding:8rpx;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius:4px;
+}
+
+.searchList {
+  display: flex;
+  padding: 20rpx;
+  position: absolute;
+  top:80rpx;
+  left: 20rpx;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.searchList navigator {
+  padding-right: 20rpx;
+}
+
+.history {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx;
+  font-size: 14px;
+}
+
+.historyVal {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15rpx;
+}
+
+.historyVal text {
+  background: #eee;
+  padding:10rpx;
+  font-size: 13px;
+  margin:10rpx;
+}
+
