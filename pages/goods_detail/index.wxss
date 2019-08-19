@@ -1,0 +1,78 @@
+/* pages/goods_detail/index.wxss */
+.swiper{
+  height: 750rpx;
+}
+.swiper image {
+  width: 100%;
+  height: 750rpx;
+}
+.goodsPrice {
+  color:#ff2d4a;
+  font-size: 16px;
+  font-weight: 600;
+  padding:20rpx;
+}
+.goodsDes {
+  display: flex;
+  justify-content: space-around;
+}
+.goodsTitle {
+  font-size: 14px;
+  padding:0 20rpx;
+  flex:1;
+}
+.goodsStar {
+  width: 150rpx;
+  color:#999;
+  border-left:1px solid #eee;
+  padding-left:10rpx;
+  text-align: center;
+}
+.star {
+  font-size:12px;
+  
+}
+.freight{
+  padding:30rpx 20rpx;
+  font-size:12px;
+  color: #999;
+}
+.freight > text {
+  padding-left:20rpx;
+}
+.foodter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background:  #eee;
+  z-index:99;
+  display: flex;
+}
+.foodLeft {
+  color:#999;
+  font-size: 12px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.foodLeft .kefu {
+ text-align: center;
+  padding:5rpx 25rpx;
+}
+.gouwuche {
+  text-align: center;
+  padding:5rpx 25rpx;
+}
+.footer-button {
+  width: 30%;
+  line-height: 100rpx;
+  background: orange;
+  color:#fff;
+  font-size: 14px;
+  text-align: center;
+}
+.footer-button:last-child {
+  background: red;
+}

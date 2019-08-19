@@ -1,0 +1,69 @@
+<!--pages/goods_detail/index.wxml-->
+<!-- 商品轮播图 -->
+<view class="goodsImg">
+  <swiper
+    class="swiper"
+    indicator-dots
+    indicator-color="rgba(255, 255, 255, .3)
+    autoplay="{{autoplay}}" 
+    interval="5000" 
+    duration="{{duration}}">
+   <block wx:for="{{detail.pics}}" wx:key="{{index}}">
+     <swiper-item>
+        <image src="{{item.pics_big}}" class="slide-image"/>
+     </swiper-item>
+   </block>
+  </swiper>
+</view>
+
+
+<!-- 商品描述 -->
+<view class="goodsDetail">
+  <view class="goodsPrice">
+    ￥<text>{{detail.goods_price}}</text>
+  </view>
+  <view class="goodsDes">
+    <view class="goodsTitle">
+      {{detail.goods_name}}
+    </view>
+    <view class="goodsStar">
+      <view class="iconfont icon-shoucang"></view>
+      <view class="star">收藏</view>
+    </view>
+  </view>
+  <view class="freight">
+    快递:<text>免运费</text>
+  </view>
+</view>
+
+<!-- 商品详情 -->
+<rich-text nodes="{{ detail.goods_introduce }}" bindtap="tap"></rich-text>
+
+<!-- 底部功能 -->
+<view class="foodter">
+  <view class="foodLeft">
+  <view class="kefu">
+    <view class="iconfont icon-kefu"></view>
+      <view>
+        联系客服
+      </view>
+  </view>
+      <!-- 跳转到购物车 -->
+      <navigator url="/pages/cart/index" open-type="switchTab" class="gouwuche">
+       <view class="iconfont icon-gouwuche"></view>
+        <view>
+          购物车
+        </view>
+     </navigator>
+ </view>
+
+  
+    <view class="footer-button">
+      加入购物车
+    </view>
+    <view class="footer-button">
+      立即购买
+    </view>
+
+</view>
+
